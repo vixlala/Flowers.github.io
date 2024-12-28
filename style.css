@@ -1,0 +1,624 @@
+body {
+    padding: 0px;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+  }
+  
+  .block {
+    border: 5px solid red;
+    max-width: 800px;
+    margin: 0 auto;
+    /* height: 800px; Removed to allow flexbox to control height */
+    display: flex; /* This is crucial for making it a flex container */
+    justify-content: space-around; /*Distribute items with space around */
+  }
+  
+  .block div {
+    background-color: #80434a;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    flex: 1; /*This will make the divs take up equal space*/
+    min-width: 0; /* Prevents unexpected collapsing */
+  }
+  
+  
+  .block_1 {
+    background-color: #80434a;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .block_2 {
+    background-color: #80434a;
+  }
+  
+  .block_3 {
+    background-color: #5f8043;
+  }
+  
+  .container {
+    margin: 0px 166px;
+  }
+  
+  .header {
+    background-image: url(зад.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .header-line {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .vertical_subtitleу{
+    color: #080404;
+    font-style: italic;
+    font-family: 'Italic', serif;
+    font-size: 30px;
+    font-weight: 200;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+  }
+  .nav-item {
+    color: #46281b;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 25px;
+    transition: color 0.3s linear;
+  }
+  .menu{
+    background-color: #ac898d;
+    
+  }
+  .nav-item1 {
+    color: #46281b;
+    font-style: italic;
+    font-family: 'Italic', serif;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 25px;
+    margin-right: 25px;
+    transition: color 0.3s linear;
+  }
+  
+  .nav-item:hover {
+    color: #d81d1d;
+  }
+  
+ 
+  .cart {
+    position: relative;
+    border-right: 1px solid #46281b;
+    padding-right: 10px;
+    height: 50px;
+  }
+  
+  .cart-img {
+    position: absolute;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    margin-left: -100px;
+    
+  }
+  
+  .num {
+    color: #46281b;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s linear;
+  }
+  
+  .num:hover {
+    color: #d81d1d;
+  }
+  
+  .phone-text {
+    font-size: 30px;
+    font-weight: 400;
+    color: #46281b;
+  }
+  
+  .phone-holder {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button {
+    background-color: #80434a;
+    color: #46281b;
+    text-decoration: none;
+    padding: 14px 18px;
+    font-weight: 700;
+    transition: background-color 0.2s linear;
+  }
+  
+  .button:hover {
+    background-color: #894b17;
+  }
+  
+  .header-down {
+    position: relative;
+  }
+  
+  .header-logo {
+    position: relative;
+    margin-left: 150px;
+    z-index: 1;
+  }
+  
+  .header-title {
+    color: #80434a;
+    font-style: italic;
+    font-family: 'Italic', serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    margin-top: 222px;
+    margin-bottom: 12px;
+    margin-left: 100px;
+  }
+  
+  .header-suptitle {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .header-suptitle:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 61px;
+    background-color: #fff;
+    top: 127px;
+    left: 16px;
+  }
+  
+  .header-suptitle:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 61px;
+    background-color: #fff;
+    top: 127px;
+    left: 358px;
+  }
+  
+  .header-button {
+    background-color: #80434a;
+    padding: 14px 28px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s linear;
+  }
+  
+  .header-button:hover {
+    background-color: #904506;
+  }
+  
+  .vertical {
+    padding: 50px 0;
+    background-color:#ac898d;
+  }
+  
+  .vertical_title {
+    color: #080404;
+    font-style: italic;
+    font-family: 'Italic', serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+  }
+  
+  .vertical_body {
+    max-width: 990px;
+    margin: 0px auto;
+  }
+  
+  .vertical_row {
+    display: flex;
+    margin: 0px -22.5px;
+  }
+  
+  .vertical_column {
+    padding: 0px 22.5px;
+    flex: 0 1 33.333%;
+    
+  }
+  .vertical_subtitlee{
+    color: #080404;
+    font-style: italic;
+    font-family: 'Italic', serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+  }
+  .vertical-button{
+    background-color:#80434a   ; 
+
+    padding: 14px 28px;
+    color: #dcd0d0;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none; 
+    border-radius: 10px;
+}
+.vertical_btn { /* Новый контейнер для кнопки */
+    display: flex;
+    justify-content: center; /* Центрирование кнопки по горизонтали */
+    margin-top: 20px; 
+  color: #fff;
+  text-decoration: none;
+  }
+.vertical-button:hover{
+    background-color:#46281b;
+  }
+  @media (max-width: 1200px) { /* Large Tablets and Desktops */
+    .vertical_row {
+      flex: 0 1 50%; /* Two columns */
+    }
+    .vertical_item{
+      margin-top: 25px;
+      padding-bottom: 20px;
+      margin-left: 35px;
+    }
+  }
+  
+  @media (max-width: 992px) { /* Tablets */
+    .vertical_column {
+      flex: 0 1 100%; /* One column */
+    }
+    .vertical_title {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) { /* Smaller Tablets & Large Phones */
+    .block {
+      justify-content: center;
+    }
+    .vertical_row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .block div {
+      flex-basis: 100%;
+    }
+    .vertical_title {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 576px) { /* Smaller Phones */
+    .vertical_title {
+      font-size: 20px;
+    }
+    .vertical_subtitle {
+      font-size: 18px; /* Reduce font size */
+    }
+    .vertical_btn {
+      font-size: 16px; /* Reduce font size */
+      padding: 8px 12px; /* Reduce padding */
+    }
+    .image img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 400px){
+    .vertical_title {
+      font-size: 16px;
+    }
+    .vertical_subtitlee{
+      font-size: 16px;
+    }
+    .vertical_subtitle {
+     font-size: 16px;
+    }
+    .vertical_btn {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  }
+  
+  .vertical_item {
+    background-color: #80434a;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .vertical_subtitle {
+    text-align: center;
+    font-size: 24px;
+    padding: 12px 0;
+    text-transform: uppercase;
+  }
+  
+  .image {
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .vertical_btn {
+    display: block;
+    margin: 0px 20px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #80434a;
+  }
+  #close-menu {
+    margin-top: auto; /* Push button to the bottom of the menu */
+    background-color: #562424; /* Bright red background */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for better size */
+    margin-top: 350px;
+  align-items: center;
+    font-size: 18px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#close-menu:hover {
+    background-color: #e03e3e; /* Darker red on hover */
+}
+
+#close-menu:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow on focus */
+}
+  .header-tit {
+    color: #080607;
+    font-style: italic;
+    font-family: 'Italic', serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+   background-color: #ac898d;
+  }
+  
+  div p {
+    /* Paragraph styling */
+    margin-top: 15px; /* Remove default top margin */
+    font-size: 25px; /* Adjust as needed */
+    padding-left: 20px; /* Adds space between image and text */
+    text-align: justify;
+  }
+  
+  div img {
+      /*optional image styling*/
+      vertical-align: top; /* Align the image top */
+  
+  }
+  
+  /* Responsive adjustments (optional) */
+  @media (max-width: 768px) {
+    div {
+      grid-template-columns: 1fr; /* Stack image and text vertically on smaller screens */
+    }
+    div p {
+        padding-left: 0; /*remove padding if stacking*/
+        text-align: center; /*Optional centering if stacking */
+    }
+  
+  }
+  
+  .outer-container {
+    background-color: #ac898d; /* Розовый цвет фона */
+    padding: 20px; /* Отступы вокруг контейнера */
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Расстояние между рядами */
+    width: 50%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
+    background-color: #ac898d; /* Цвет фона контейнера */
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px; /* Расстояние между элементами в ряду */
+}
+
+.grid-item {
+    background-color: #80434a; /* Розовый фон для каждого элемента */
+    border-radius: 8px; /* Закругление углов */
+    padding: 10px; /* Внутренние отступы */
+    text-align: center; /* Центрирование текста */
+}
+
+.grid-item img {
+    max-width: 200px; /* Ширина изображения */
+    height: 200px; /* Высота изображения */
+    display: block; /* Убираем пробелы под изображением */
+    margin: 0 auto; /* Центрирование изображения */
+    object-fit: cover; /* Сохраняет пропорции и заполняет весь контейнер */
+}
+
+/* Адаптация для разных размеров экрана */
+@media (max-width: 1200px) {
+    .grid-container {
+        width: 70%; /* Увеличиваем ширину контейнера */
+    }
+
+    .grid-row {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+        gap: 50px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .grid-item img {
+        max-width: 150px; /* Уменьшаем максимальную ширину изображения */
+        height: 150px; /* Уменьшаем высоту изображения */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        width: 90%; /* Увеличиваем ширину контейнера */
+    }
+
+    .grid-row {
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 30px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .grid-item img {
+        max-width: 100%; /* Изображения на всю ширину контейнера */
+        height: auto; /* Автоматическая высота */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item {
+        padding: 15px; /* Уменьшаем внутренние отступы */
+    }
+
+    .grid-item img {
+        max-width: 100%; /* Изображения на всю ширину контейнера */
+        height: auto; /* Автоматическая высота */
+    }
+}
+.forms {
+  position: relative;
+  background-color: #e3acc2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  margin-left: -1px;
+  display: flex;
+  flex-direction: column; /* Вертикальная ориентация */
+  justify-content: center; /* Центрирование по вертикали */
+  align-items: center; /* Центрирование по горизонтали */
+}
+
+.forms::before {
+  content: ''; /* Псевдоэлемент */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0; left: 0; right: 0; bottom: 0; /* Заполнение контейнера */
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  z-index: 1; /* Уровень под контентом */
+}
+
+.forms > * {
+  position: relative; /* Относительное позиционирование для дочерних элементов */
+  z-index: 2; /* Уровень выше фона */
+  margin-left: -17px;
+}
+
+.form-title {
+  margin: 20px;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center; /* Центрирование текста */
+  letter-spacing: 1px;
+  color: #FFFFFFDE;
+}
+
+#form {
+  width: 300px; /* Фиксированная ширина формы */
+  display: flex; /* Flexbox для расположения элементов */
+  flex-direction: column; /* Вертикальное расположение */
+  z-index: 2;
+  align-items: center;
+}
+
+#form textarea,
+#form input[type="email"],
+#form input[type="text"] {
+  width: 100%; /* Полная ширина */
+  padding: 10px; /* Внутренние отступы */
+  margin-bottom: 15px; /* Отступ снизу */
+  border: 1px solid #ccc; /* Рамка полей */
+  border-radius: 10px; /* Закругление углов */
+  font-size: 16px; /* Размер шрифта */
+  font-family: Montserrat;
+}
+
+#form input[type="hidden"] {
+  display: none; /* Скрытое поле для защиты от спама */
+}
+
+#form button {
+
+display: inline-block; /* Позволяет задать размеры кнопки */
+width: 100%;
+   padding: 10px 20px; /* Отступы внутри кнопки */
+   letter-spacing: 2px;
+   font-size: 18px;
+   background-color: #ac898d; /* Цвет фона кнопки */
+   color: white; /* Цвет текста кнопки */
+   text-decoration: none; /* Убирает подчеркивание */
+   border-radius: 5px; /* Скругление углов кнопки */
+   transition: background-color 0.1s; /* Плавный переход цвета кнопки */
+}
+
+
+  
+
+#form button:hover {
+  transform: scale(1.05); 
+}
+
+#form button.submitted:hover {
+  transform: scale(1); /* Отменяем увеличение при наведении */
+}
+
+#form button:active {
+  background-color: grey; /* Цвет кнопки при нажатии */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .forms {
+      height: auto; /* Автоматическая высота для мобильных устройств */
+      padding: 20px; /* Добавьте отступы для мобильных устройств */
+  }
+
+  .form-title {
+      font-size: 24px; /* Уменьшение размера заголовка */
+  }
+
+  #form {
+      width: 90%; /* Ширина формы 90% для мобильных устройств */
+  }
+
+  #form button {
+      font-size: 16px; /* Увеличение размера шрифта кнопки */
+  }
+  
+  #form textarea,
+  #form input[type="email"],
+  #form input[type="text"] {
+      font-size: 14px; /* Уменьшение размера шрифта полей */
+  }
+
+}

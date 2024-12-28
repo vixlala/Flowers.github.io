@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <title>Салон цветов</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f8f8f8;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            top: 50px;
+        }
+        .header-logo {
+            margin-top: 25px;
+        }
+        .nav {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .burger div {
+            width: 30px;
+            height: 4px;
+            background-color: black;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(209, 184, 184, 0.95);
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 2px 10px rgba(219, 132, 132, 0.1);
+            z-index: 1000;
+            padding-top: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu.active {
+            display: flex;
+        }
+        .menu a {
+            margin: 15px 0;
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+        }
+        .phone {
+            margin-top: 40px;
+        }
+        .cart {
+            margin-top: 40px;
+        }
+        .header-title {
+            margin-top: -450px;
+        }
+        .header-bth {
+            margin-top: 50px;
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #d76d6d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #c65c5c;
+        }
+        @media (max-width: 768px) {
+            .nav, .phone, .cart {
+                display: none;
+            }
+            .burger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class='header'>
+    <div class='header-logo'>
+        <img src="цветок.png" width="100" height="90" alt="">
+    </div>
+    <div class='burger' id="burger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class='nav'>
+        <a class='nav-item' href="#">Главная</a>
+        <a class='nav-item' href="#interests-section">Каталог</a>
+        <a class='nav-item' href="#compositions-section">Доставка</a>
+        <a class='nav-item' href="#company-section">Миссия</a>
+    </div>
+    <div class='phone'>
+        <div class='phone-holder'>
+            <div class='phone-img'>
+                <img src="phone.png" alt="">
+            </div>
+            <div class='number'><a class='num' href="#">+375(44)123-45-67</a></div>
+        </div>
+    </div>
+    <div class='cart'>
+        <a href="#">
+            <img class='cart-img' src="cart.png" alt="Корзина">
+        </a>
+    </div>
+</div>
+
+<!-- Burger Menu -->
+<div class="menu" id="menu">
+    <a class='nav-item1' href="#" id="home-link">Главная</a>
+    <a class='nav-item1' href="#interests-section" id="catalog-link">Каталог</a>
+    <a class='nav-item1' href="#compositions-section" id="delivery-link">Доставка</a>
+    <a class='nav-item1' href="#company-section" id="mission-link">Миссия</a>
+    <button id="close-menu">Закрыть</button>
+</div>
+
+<script>
+    const burgerMenu = document.getElementById('burger-menu');
+    const menu = document.getElementById('menu');
+    const closeMenu = document.getElementById('close-menu');
+
+    burgerMenu.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        menu.classList.remove('active');
+    });
+</script>
+
+<div class='header-down'>
+    <div class='header-title'>
+        Цветы
+        <div class='header-subtitle'>которые делают вас счастливыми</div>
+        <div class='header-bth'>
+            <a href='#' class='header-button'>Перейти в каталог</a>
+        </div>
+    </div>
+</div>
+
+<div class="vertical" id="interests-section">
+    <div class="vertical_title title">Выберите что вас интересует</div>
+    <div class="vertical_body">
+        <div class="vertical_row">
+            <div class="vertical_column">
+                <div class="vertical_item">
+                    <div class="vertical_subtitle">Сборные букеты</div>
+                    <div class="image">
+                        <img src="букет.jpg" alt="Сборные букеты" width="200px" height="250px">
+                    </div>
+                    <div class="vertical-button">
+                        <a href="#" class="vertical_btn">Перейти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="vertical_column">
+                <div class="vertical_item">
+                    <div class="vertical_subtitle">Корзины с цветами</div>
+                    <div class="image">
+                        <img src="корзина1.jpg" alt="Корзины с цветами" width="220px" height="250px">
+                    </div>
+                    <div class="vertical-button">
+                        <a href="#" class="vertical_btn">Перейти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="vertical_column">
+                <div class="vertical_item">
+                    <div class="vertical_subtitle">Свадебные букеты</div>
+                    <div class="image">
+                        <img src="свадьба.webp" alt="Свадебные букеты" width="200px" height="250px">
+                    </div>
+                    <div class="vertical-button">
+                        <a href="#" class="vertical_btn">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class='header-tit' id="company-section">
+    О нашей компании
+    <div style="display: grid; grid-template-columns: 220px auto; padding-left: 20px;">
+        <img src="photo_2024-11-26_12-33-12.jpg" alt="Корзины с цветами" width="220px" height="270px">
+        <p>Сеть салонов цветов — это воплощение мечты молодой и талантливой флористки Виолетты, 
+            которая с детства была очарована красотой и разнообразием растительного мира. Ее страсть к цветам, внимание к деталям и стремление создавать 
+            неповторимые композиции легли в основу создания нашей компании.
+            Первый салон открылся в 2020 году в Минске и сразу же завоевал любовь минчан 
+            своим широким ассортиментом свежих цветов, оригинальными цветочными композициями и высоким уровнем обслуживания. Виолетта лично подбирала каждый цветок, 
+            стремясь создать неповторимую атмосферу уюта и красоты в каждом букете.
+            Сегодня салон цветов — это успешная сеть, предлагающая широкий выбор цветов и цветочных композиций на любой вкус и случай. Мы работаем только со свежими цветами высшего качества, 
+            поставляемыми напрямую от лучших производителей. Наша команда опытных флористов создает изысканные букеты и композиции, учитывая индивидуальные пожелания каждого клиента.</p>
+    </div>
+</div>
+
+<center>
+    <div class="outer-container">
+    <div class="grid-container">
+        <div class="vertical_subtitleу">Свадебные букеты</div>
+        <div class="grid-row">
+            <div class="grid-item">
+                <p>Композиция 1</p><img src="букет1.jpg" alt="Картинка 1">
+                <p>110р</p>
+            </div>
+            <div class="grid-item">
+                <p>Композиция 2</p><img src="букет2.jpg" alt="Картинка 2">
+                <p>130р</p>
+            </div>
+            <div class="grid-item">
+                <p>Композиция 3</p><img src="букет3.webp" alt="Картинка 3">
+                <p>150р</p>
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-item">
+                <p>Композиция 4</p><img src="букет4.jpg" alt="Картинка 4">
+                <p>100р</p>
+            </div>
+            <div class="grid-item">
+                <p>Композиция 5</p><img src="букет52.jpg" alt="Картинка 5">
+                <p>140р</p>
+            </div>
+            <div class="grid-item">
+                <p>Композиция 6</p><img src="букет6.png" alt="Картинка 6">
+                <p>150р</p>
+            </div>
+        </div>
+    </div>
+</center>
+</div>
+
+<section class="page-content page-content-5">
+    <div class="forms">
+        <div class="form-title">Оставьте ваш отзыв</div>
+        <form method="POST" accept-charset="UTF-8" id="form">
+            <input type="text" name="full-name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <input type="hidden" name="_gotcha" style="display:none !important">
+            <textarea id="comment" name="comment" placeholder="Ваш комментарий" rows="4" required></textarea>
+            <button type="submit">ОТПРАВИТЬ</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    const form = document.getElementById("form");
+    form.addEventListener("submit", formSubmit);
+
+    function formSubmit(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        fetch("https://getform.io/f/bejjmoga", {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json",
+            },
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Ваше сообщение успешно отправлено!");
+                form.reset();
+            } else {
+                alert("Произошла ошибка при отправке. Пожалуйста, попробуйте снова.");
+            }
+        })
+        .catch(error => {
+            console.error("Ошибка:", error);
+            alert("Произошла ошибка. Пожалуйста, попробуйте снова.");
+        });
+    }
+</script>
+
+</body>
+</html>
